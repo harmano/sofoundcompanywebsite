@@ -1735,6 +1735,10 @@ font-family: 'Lato', sans-serif;
     padding-left: 10%;
     padding-right: 10%;
   }
+  .fontsize-text-middle{
+    font-size:5vw;
+    margin-top:30px;
+  }
 }
 .text-about-font {
   font-size:6vw;
@@ -2037,7 +2041,12 @@ font-family: 'Lato', sans-serif;
   .text-table-small{
     font-size: 12px;
   }
-
+  .margin-small-film{
+    padding-right: 60px;
+  }
+  .margin-small-film-bottom{
+    margin-bottom: 60px;
+  }
 }
 
 
