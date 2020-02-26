@@ -1740,7 +1740,7 @@ font-family: 'Lato', sans-serif;
 
 .text-about-disco{
   font-size: 15px;
-  font-weight: 100;
+  font-weight: 400;
 }
 /*.....................  start of phone styles ..................... */
 @media screen and (max-width: 479px) {
