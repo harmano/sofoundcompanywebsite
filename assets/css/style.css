@@ -49,6 +49,9 @@ transform: translate(0, 0);
   width: 80%;
 
 }
+
+#dont-show-on-small-2{display: block;}
+
 @keyframes fadein {
     from { opacity: 0; }
     to   { opacity: 1; }
@@ -1758,6 +1761,15 @@ font-family: 'Lato', sans-serif;
     padding-left: 5px;
     margin-top: 30px;
   }
+  .small-header-mobile-4{
+    padding-left: 20px;
+    margin-right: 100px;
+    margin-bottom: 70px;
+  }
+  .small-header-mobile-5{
+    padding-left: 20px;
+    padding-right: 50px;
+  }
   .small-header-mobile-marketing-margin{
     margin-bottom:-30px;
     padding-top: 20px;
@@ -1810,6 +1822,7 @@ font-family: 'Lato', sans-serif;
 
   #show-on-small{display: block;}
   #dont-show-on-small{display: none;}
+  #dont-show-on-small-2{display: none;}
 
   #content-mobile {display: block;}
   #content-mobile-text{
