@@ -50,7 +50,7 @@ transform: translate(0, 0);
 
 }
 
-#dont-show-on-small-2{display: block;}
+#dont-show-on-small-4{display: block;}
 
 @keyframes fadein {
     from { opacity: 0; }
@@ -1822,7 +1822,7 @@ font-family: 'Lato', sans-serif;
 
   #show-on-small{display: block;}
   #dont-show-on-small{display: none;}
-  #dont-show-on-small-2{display: none;}
+  #dont-show-on-small-4{display: none;}
 
   #content-mobile {display: block;}
   #content-mobile-text{
