@@ -2034,7 +2034,9 @@ font-family: 'Lato', sans-serif;
     padding-bottom: 0;
     margin-left: -5px
   }
-
+  .text-table-small{
+    font-size: 12px;
+  }
 
 }
 
