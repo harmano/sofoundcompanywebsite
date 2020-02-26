@@ -2042,10 +2042,15 @@ font-family: 'Lato', sans-serif;
     font-size: 12px;
   }
   .margin-small-film{
-    padding-right: 60px;
+    padding-right: 70px;
+    font-size: 10px;
   }
   .margin-small-film-bottom{
     margin-bottom: 60px;
+  }
+  .text-contact-3{
+    font-weight: 500;
+    font-size: 8px;
   }
 }
 
