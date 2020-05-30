@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+<form method="post" name="myemailform" action="form-to-email.php">
+
+Enter Name:	<input type="text" name="name">
+
+Enter Email Address:	<input type="text" name="email">
+
+Enter Message:	<textarea name="message"></textarea>
+
+<input type="submit" value="Send Form">
+</form>
+
+    <?php
+      $name = $_POST['name'];
+      $visitor_email = $_POST['email'];
+      $message = $_POST['message'];
+    ?>
+    <?php
+      	$email_from = 'yourname@yourwebsite.com';
+
+      	$email_subject = "New Form submission";
+
+      	$email_body = "You have received a new message from the user $name.\n".
+                                  "Here is the message:\n $message".
+      ?>
+  </body>
+</html>
