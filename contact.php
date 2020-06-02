@@ -1,44 +1,49 @@
 <?php
+session_start();
+require_once 'libs/phpmailer/PHPMailerAutoload.php';
 
-if($_POST["submit"]) {
-    $recipient="harmanobeffreteam@thesofound.com";
-    $subject="Form to email message";
-    $sender=$_POST["sender"];
-    $senderEmail=$_POST["senderEmail"];
-    $message=$_POST["message"];
+$errors =[];
 
-    $mailBody="Name: $sender\nEmail: $senderEmail\n\n$message";
+if(isset($_POST['name'],$_POST['email'],$_POST['message'],$_POST['phone'],$_POST['subjectsubject'])){
+    $fields=[
+        'name'=>$_POST['name'],
+        'email'=>$_POST['email'],
+        'message'=>$_POST['message'],
+        'phone'=>$_POST['phone'],
+        'subjectsubject'=>$_POST['subjectsubject']
+    ];
+    foreach($fields as $field=>$data){
+        if(empty($data)){
+            $errors[]='The '.$field . ' field is required.';
+        }
+    }
+    if(empty($errors)){
+        $m=new PHPMailer;
+        $m->isSMTP();
+        $m->SMTPAuth=true;
+        $m->Host='smtp.gmail.com';
+        $m->Username='redirect.tsf.101@gmail.com';//replace with your email address
+        $m->Password='hjkhkjhhkj788**773LL';//replace with your password
+        $m->SMTPSecure='ssl';
+        $m->Port=465;
 
-    mail($recipient, $subject, $mailBody, "From: $sender <$senderEmail>");
+        $m->isHTML();
+        $m->Subject = $fields['subjectsubject'];
+        $m->Body='From: '.$fields['name'].'<p>'.'Email: '.$fields['email'].'</p>'.'<p>'.'Phone: '.$fields['phone'].'</p>'.'<p>'.$fields['message'].'</p>';
 
-    $thankYou="<p>Thank you! Your message has been sent.</p>";
+        $m->FromName='Contact';
+        $m->AddAddress('team@thesofound.com','Some one');
+        if ($m->send()) {
+          $referer = $_SERVER['HTTP_REFERER'];
+          header("Location: $referer");
+          die();
+        }else{
+            $errors[]="Sorry ,Could not send email.Try again later.";
+        }
+    }
+}else{
+    $errors[]= 'Something went wrong';
 }
-
-?><!DOCTYPE html>
-
-<html>
-<head>
-    <meta charset="utf-8">
-    <title>Contact form to email</title>
-</head>
-
-<body>
-
-    <?=$thankYou ?>
-
-    <form method="post" action="contact.php">
-        <label>Name:</label>
-        <input name="sender">
-
-        <label>Email address:</label>
-        <input name="senderEmail">
-
-        <label>Message:</label>
-        <textarea rows="5" cols="20" name="message"></textarea>
-
-        <input type="submit" name="submit">
-    </form>
-
-</body>
-
-</html>
+$_SESSION['errors']=$errors;
+$_SESSION['fields']=$fields;
+header ('Location:index.html');
