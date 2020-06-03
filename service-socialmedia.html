@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <script src="jquery-3.1.1.min.js"></script>
     <title>Social Media - The SoFound Company</title>
     <meta charset="UTF-8">
     <link href="css/hover-min.css" rel="stylesheet">
@@ -1863,36 +1864,43 @@
     <div class="modal-content">
       <span class="close">&times;</span>
       <h3 style="padding-bottom:20px;" class="text-title text-center">Have a Question?</h3>
-      <form onsubmit="return validateForm()" action="index.html" class=" container">
+      <form  action="contact.php" method="post" class=" background-box ">
+        <h5 style="margin-bottom:7%; margin-top: 5%;"class="text-form text-center">Don't be afraid, Get in Touch!</h5>
         <div class="form-row">
-          <div  class="  search_categories  form-group col-12 col-sm-12">
-            <select  id="inputState" name="search_categories" class="textarea-info form-control">
-              <option selected>Web & Software Development</option>
+          <!--- Services -------------->
+          <div  class="  search_categories  form-group col-6 col-sm-6">
+            <select  id="inputState"  class="textarea-info form-control" name="subjectsubject"  <?php echo isset ($fields['subjectsubject'])? 'value="'.e($fields['subjectsubject']).'"':''?>>
+              <option selected>Services...</option>
+              <option>Web & Software Development</option>
               <option>Graphic Designing</option>
               <option>Digital Marketing</option>
               <option>Social Media</option>
               <option>Film & Photography</option>
+              <option>Business Management</option>
               <option>Brand Identity</option>
-              <option>Other</option>
             </select>
           </div>
-          <div class="form-group col-12 col-sm-12">
-            <input style="border-radius:25px;" placeholder="Name" type="text" name="firstname" class=" textarea-info form-control" required>
+          <!--- Name -------------->
+          <div class="form-group col-6 col-sm-6">
+            <input style="border-radius:25px;" placeholder="Name" type="text" name="name" class=" textarea-info form-control" required <?php echo isset ($fields['name'])? 'value="'.e($fields['name']).'"':''?>
           </div>
         </div>
         <div class="form-row">
+            <!--- Email -------------->
           <div class="form-group col-md-6 col-sm-6">
-            <input style="border-radius: 25px;" type="email" class="textarea-info form-control" id="Email" placeholder="Email" required>
+            <input style="border-radius: 25px;" type="email" class="textarea-info form-control" id="Email" placeholder="Email" name="email" required <?php echo isset ($fields['email'])? 'value="'.e($fields['email']).'"':''?>
           </div>
+          <!--- Phone -------------->
           <div class="form-group col-md-6 col-sm-6">
-            <input style="border-radius: 25px; "  class="textarea-info form-control" placeholder="Phone" type="tel" name="phone" required>
+            <input style="border-radius: 25px; "  class="textarea-info form-control" placeholder="Phone" type="tel" name="phone"  <?php echo isset ($fields['phone'])? 'value="'.e($fields['phone']).'"':''?>
           </div>
         </div>
+        <!--- Message -------------->
         <div class="form-group">
-         <textarea style="border-radius: 15px;" placeholder="How can we help?" class="textarea-info form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+         <textarea style="border-radius: 15px;" placeholder="How can we help?" class="textarea-info form-control" id="exampleFormControlTextarea1" id="comment" name="message" rows="3" required <?php echo isset ($fields['message'])? e($fields['message']):''?></textarea>
        </div>
-
-       <button style="margin-top:2%;" class="style-button-2" type="submit" name="button">Contact</button>
+       <!--- Button -------------->
+       <button  class="style-button-form" type="submit" value="Send" name="button">Contact Us</button>
       </form>
     </div>
 
@@ -1953,7 +1961,7 @@
           <!-- <p class="text-footer">Here you can use rows and columns to. </p> -->
             <ul class=" list-unstyled">
               <li style="margin-bottom: 8px;">
-                <a  class="text-footer-list" href="mailto:thesofoundcompanyteam@thesofound.com?subject = Inquiry">thesofoundcompanyteam@thesofound.com</a>
+                <a  class="text-footer-list" href="mailto:team@thesofound.com?subject = Inquiry">team@thesofound.com</a>
               </li>
               <li style="margin-bottom: 8px;">
                 <a class="text-footer-list" target="_blank" href="https://www.instagram.com/thesofound/">@TheSoFound</a>

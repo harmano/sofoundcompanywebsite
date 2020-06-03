@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <script src="jquery-3.1.1.min.js"></script>
     <title>Web Development - The SoFound Company</title>
     <meta charset="UTF-8">
     <link href="css/hover-min.css" rel="stylesheet">
@@ -1899,37 +1900,44 @@
 <!-- ............................................. Footer ............................................. -->
 <section class="fadingin">
   <div id="margin-d" class="text-center">
-  <form  style=""class=" background-box ">
-    <h5 style="margin-bottom:7%; margin-top: 5%;"class="text-form text-center">Don't be afraid, Get in Touch!</h5>
-    <div class="form-row">
-      <div  class="  search_categories  form-group col-6 col-sm-6">
-        <select  id="inputState" name="search_categories" class="textarea-info form-control">
-          <option selected>Services...</option>
-          <option>Web & Software Development</option>
-          <option>Graphic Designing</option>
-          <option>Digital Marketing</option>
-          <option>Social Media</option>
-          <option>Film & Photography</option>
-          <option>Brand Identity</option>
-        </select>
+    <form  action="contact.php" method="post" class=" background-box ">
+      <h5 style="margin-bottom:7%; margin-top: 5%;"class="text-form text-center">Don't be afraid, Get in Touch!</h5>
+      <div class="form-row">
+        <!--- Services -------------->
+        <div  class="  search_categories  form-group col-6 col-sm-6">
+          <select  id="inputState"  class="textarea-info form-control" name="subjectsubject"  <?php echo isset ($fields['subjectsubject'])? 'value="'.e($fields['subjectsubject']).'"':''?>>
+            <option selected>Services...</option>
+            <option>Web & Software Development</option>
+            <option>Graphic Designing</option>
+            <option>Digital Marketing</option>
+            <option>Social Media</option>
+            <option>Film & Photography</option>
+            <option>Business Management</option>
+            <option>Brand Identity</option>
+          </select>
+        </div>
+        <!--- Name -------------->
+        <div class="form-group col-6 col-sm-6">
+          <input style="border-radius:25px;" placeholder="Name" type="text" name="name" class=" textarea-info form-control" required <?php echo isset ($fields['name'])? 'value="'.e($fields['name']).'"':''?>
+        </div>
       </div>
-      <div class="form-group col-6 col-sm-6">
-        <input style="border-radius:25px;" placeholder="Name" type="text" name="firstname" class=" textarea-info form-control">
+      <div class="form-row">
+          <!--- Email -------------->
+        <div class="form-group col-md-6 col-sm-6">
+          <input style="border-radius: 25px;" type="email" class="textarea-info form-control" id="Email" placeholder="Email" name="email" required <?php echo isset ($fields['email'])? 'value="'.e($fields['email']).'"':''?>
+        </div>
+        <!--- Phone -------------->
+        <div class="form-group col-md-6 col-sm-6">
+          <input style="border-radius: 25px; "  class="textarea-info form-control" placeholder="Phone" type="tel" name="phone"  <?php echo isset ($fields['phone'])? 'value="'.e($fields['phone']).'"':''?>
+        </div>
       </div>
-    </div>
-    <div class="form-row">
-      <div class="form-group col-md-6 col-sm-6">
-        <input style="border-radius: 25px;" type="email" class="textarea-info form-control" id="Email" placeholder="Email">
-      </div>
-      <div class="form-group col-md-6 col-sm-6">
-        <input style="border-radius: 25px; "  class="textarea-info form-control" placeholder="Phone" type="tel" name="phone"  required>
-      </div>
-    </div>
-    <div class="form-group">
-     <textarea style="border-radius: 15px;" placeholder="How can we help?" class="textarea-info form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-   </div>
-   <button  class="style-button-form" type="button" name="button">Contact Us</button>
-  </form>
+      <!--- Message -------------->
+      <div class="form-group">
+       <textarea style="border-radius: 15px;" placeholder="How can we help?" class="textarea-info form-control" id="exampleFormControlTextarea1" id="comment" name="message" rows="3" required <?php echo isset ($fields['message'])? e($fields['message']):''?></textarea>
+     </div>
+     <!--- Button -------------->
+     <button  class="style-button-form" type="submit" value="Send" name="button">Contact Us</button>
+    </form>
 </div>
 </section>
 <footer >
@@ -1952,7 +1960,7 @@
         <!-- <p class="text-footer">Here you can use rows and columns to. </p> -->
           <ul class=" list-unstyled">
             <li style="margin-bottom: 8px;">
-              <a  class="text-footer-list" href="mailto:thesofoundcompanyteam@thesofound.com?subject = Inquiry">thesofoundcompanyteam@thesofound.com</a>
+              <a  class="text-footer-list" href="mailto:team@thesofound.com?subject = Inquiry">team@thesofound.com</a>
             </li>
             <li style="margin-bottom: 8px;">
               <a class="text-footer-list" target="_blank" href="https://www.instagram.com/thesofound/">@TheSoFound</a>
