@@ -77,7 +77,7 @@
                       <div class="form-row">
                         <!--- Services -------------->
                         <div  class="  search_categories  form-group col-12 col-sm-12">
-                          <select  id="inputState" name="subjectsubject" class="textarea-info form-control" <?php echo isset ($fields['subjectsubject'])? 'value="'.e($fields['subjectsubject']).'"':''?>>
+                          <select  id="inputState" name="subjectsubject" class="textarea-info form-control" >
                             <option selected>Services...</option>
                             <option>Web & Software Development</option>
                             <option>Graphic Designing</option>
@@ -89,22 +89,22 @@
                         </div>
                         <!--- NName -------------->
                         <div class="form-group col-12 col-sm-12">
-                          <input style="border-radius:25px;" placeholder="Name" type="text" name="name" class=" textarea-info form-control" required <?php echo isset ($fields['name'])? 'value="'.e($fields['name']).'"':''?>
+                          <input style="border-radius:25px;" placeholder="Name" type="text" name="name" class=" textarea-info form-control" required>
                         </div>
                       </div>
                       <div class="form-row">
                         <!--- Email -------------->
                         <div class="form-group col-md-6 col-sm-6">
-                          <input style="border-radius: 25px;" type="email" class="textarea-info form-control" id="Email" name="email" placeholder="Email" required <?php echo isset ($fields['email'])? 'value="'.e($fields['email']).'"':''?>
+                          <input style="border-radius: 25px;" type="email" class="textarea-info form-control" id="Email" name="email" placeholder="Email" required >
                         </div>
                         <!--- Phone -------------->
                         <div class="form-group col-md-6 col-sm-6">
-                          <input style="border-radius: 25px; "  class="textarea-info form-control" placeholder="Phone" type="tel" name="phone"   <?php echo isset ($fields['phone'])? 'value="'.e($fields['phone']).'"':''?>
+                          <input style="border-radius: 25px; "  class="textarea-info form-control" placeholder="Phone" type="tel" name="phone">
                         </div>
                       </div>
                       <!--- Message -------------->
                       <div class="form-group">
-                       <textarea style="border-radius: 15px;" placeholder="How can we help?" class="textarea-info form-control" id="exampleFormControlTextarea1" id="comment" name="message" rows="3" required <?php echo isset ($fields['message'])? e($fields['message']):''?></textarea>
+                       <textarea style="border-radius: 15px;" placeholder="How can we help?" class="textarea-info form-control" id="exampleFormControlTextarea1" id="comment" name="message" rows="3" required ></textarea>
                      </div>
 
                      <button type="submit" value="Send" style="margin-top:5%;" class="style-button-2" type="submit" name="button">Contact</button>
@@ -426,7 +426,7 @@
     <div class="form-row">
       <!--- Services -------------->
       <div  class="  search_categories  form-group col-6 col-sm-6">
-        <select  id="inputState"  class="textarea-info form-control" name="subjectsubject"  <?php echo isset ($fields['subjectsubject'])? 'value="'.e($fields['subjectsubject']).'"':''?>>
+        <select  id="inputState"  class="textarea-info form-control" name="subjectsubject"  >
           <option selected>Services...</option>
           <option>Web & Software Development</option>
           <option>Graphic Designing</option>
@@ -439,7 +439,7 @@
       </div>
       <!--- Name -------------->
       <div class="form-group col-6 col-sm-6">
-        <input style="border-radius:25px;" placeholder="Name" type="text" name="name" class=" textarea-info form-control" required <?php echo isset ($fields['name'])? 'value="'.e($fields['name']).'"':''?>
+        <input style="border-radius:25px;" placeholder="Name" type="text" name="name" class=" textarea-info form-control" required >
       </div>
     </div>
     <div class="form-row">
@@ -449,12 +449,12 @@
       </div>
       <!--- Phone -------------->
       <div class="form-group col-md-6 col-sm-6">
-        <input style="border-radius: 25px; "  class="textarea-info form-control" placeholder="Phone" type="tel" name="phone"  <?php echo isset ($fields['phone'])? 'value="'.e($fields['phone']).'"':''?>
+        <input style="border-radius: 25px; "  class="textarea-info form-control" placeholder="Phone" type="tel" name="phone"  >
       </div>
     </div>
     <!--- Message -------------->
     <div class="form-group">
-     <textarea style="border-radius: 15px;" placeholder="How can we help?" class="textarea-info form-control" id="exampleFormControlTextarea1" id="comment" name="message" rows="3" required <?php echo isset ($fields['message'])? e($fields['message']):''?></textarea>
+     <textarea style="border-radius: 15px;" placeholder="How can we help?" class="textarea-info form-control" id="exampleFormControlTextarea1" id="comment" name="message" rows="3" required ></textarea>
    </div>
    <!--- Button -------------->
    <button  class="style-button-form" type="submit" value="Send" name="button">Contact Us</button>
