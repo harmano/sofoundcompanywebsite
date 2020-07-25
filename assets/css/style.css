@@ -17,6 +17,12 @@
 .expando:target {
   display: block;
 }
+
+.contact-new{
+  color: white;
+  font-size: 20px;
+
+}
 .fadingin {
 opacity: 0;
 transform: translate(0, 20px);

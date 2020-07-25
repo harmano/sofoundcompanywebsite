@@ -63,8 +63,9 @@
                 <a class="text-header nav-link" href="contact.html">Contact</a>
               </div>
               <div class="col-4 ">
-                <button  style="margin:0; " id="myBtn" type="button" class="d-sm-none d-md-block d-none text-header-button header-button-sizing btn btn-light"> Have a Question?</button>
-                <div id="myModal" class="modal">
+                <a href="contact.html#linkto-connect">
+                <button  style="margin:0; "  type="button" class="d-sm-none d-md-block d-none text-header-button header-button-sizing btn btn-light"> Have a Question?</button>
+                </a>  <div id="myModal" class="modal">
 
                   <!-- Modal content -->
                   <div class="modal-content">
@@ -1908,48 +1909,7 @@
   </div>
 
   <!-- ............................................. Footer ............................................. -->
-  <section class="fadingin">
-    <div id="margin-d" class="text-center">
-      <form  action="contact.php" method="post" class=" background-box ">
-        <h5 style="margin-bottom:7%; margin-top: 5%;"class="text-form text-center">Don't be afraid, Get in Touch!</h5>
-        <div class="form-row">
-          <!--- Services -------------->
-          <div  class="  search_categories  form-group col-6 col-sm-6">
-            <select  id="inputState"  class="textarea-info form-control" name="subjectsubject"  <?php echo isset ($fields['subjectsubject'])? 'value="'.e($fields['subjectsubject']).'"':''?>>
-              <option selected>Services...</option>
-              <option>Web & Software Development</option>
-              <option>Graphic Designing</option>
-              <option>Digital Marketing</option>
-              <option>Social Media</option>
-              <option>Film & Photography</option>
-              <option>Business Management</option>
-              <option>Brand Identity</option>
-            </select>
-          </div>
-          <!--- Name -------------->
-          <div class="form-group col-6 col-sm-6">
-            <input style="border-radius:25px;" placeholder="Name" type="text" name="name" class=" textarea-info form-control" required <?php echo isset ($fields['name'])? 'value="'.e($fields['name']).'"':''?>
-          </div>
-        </div>
-        <div class="form-row">
-            <!--- Email -------------->
-          <div class="form-group col-md-6 col-sm-6">
-            <input style="border-radius: 25px;" type="email" class="textarea-info form-control" id="Email" placeholder="Email" name="email" required <?php echo isset ($fields['email'])? 'value="'.e($fields['email']).'"':''?>
-          </div>
-          <!--- Phone -------------->
-          <div class="form-group col-md-6 col-sm-6">
-            <input style="border-radius: 25px; "  class="textarea-info form-control" placeholder="Phone" type="tel" name="phone"  <?php echo isset ($fields['phone'])? 'value="'.e($fields['phone']).'"':''?>
-          </div>
-        </div>
-        <!--- Message -------------->
-        <div class="form-group">
-         <textarea style="border-radius: 15px;" placeholder="How can we help?" class="textarea-info form-control" id="exampleFormControlTextarea1" id="comment" name="message" rows="3" required <?php echo isset ($fields['message'])? e($fields['message']):''?></textarea>
-       </div>
-       <!--- Button -------------->
-       <button  class="style-button-form" type="submit" value="Send" name="button">Contact Us</button>
-      </form>
-  </div>
-  </section>
+
   <footer >
     <img src="assets/images/footer-short.jpg" class="image-footer"  alt="">
 

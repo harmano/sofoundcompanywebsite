@@ -63,8 +63,10 @@
                 <a class="text-header nav-link" href="contact.html">Contact</a>
               </div>
               <div class="col-4 ">
-                <button  style="margin:0; " id="myBtn" type="button" class="d-sm-none d-md-block d-none text-header-button header-button-sizing btn btn-light"> Have a Question?</button>
-                <div id="myModal" class="modal">
+                <a href="contact.html#linkto-connect">
+                <button  style="margin:0; "  type="button" class="d-sm-none d-md-block d-none text-header-button header-button-sizing btn btn-light"> Have a Question?</button>
+                </a>
+                  <div id="myModal" class="modal">
 
                   <!-- Modal content -->
                   <div class="modal-content">
@@ -198,14 +200,7 @@
       <div style="margin-top:15%; margin-right:7%; "class="row">
         <div class=" col-12 col-xs-12 col-md-6 col-lg-6">
           <div class="row form-contact-margin ">
-            <div class="text-right col-3 col-lg-6 col-md-6 col-xs-6 c">
-              <a href="tel:" class="btn-floating btn-li mx-1">
-                <i style="color:black;" class="socials-2  fas fa-phone "> </i>
-              </a>
-            </div>
-            <div  class="form-margin-bottom text-left col-3 col-lg-6 col-md-6 col-xs-6">
-              <a href="tel:" style="margin-top:2%; display:inline;"><p style="display:inline;" class="text-contact text-phone-contact"></p></a>
-            </div>
+          
 
             <div class="text-right col-3 col-lg-6 col-md-6 col-xs-6">
               <a href="mailto:team@thesofound.com?subject = Inquiry" class="btn-floating btn-li mx-1">
@@ -273,7 +268,7 @@
                    <textarea style="border-radius: 15px;" placeholder="How can we help?" class="textarea-info form-control" id="exampleFormControlTextarea1" id="comment" name="message" rows="3" required <?php echo isset ($fields['message'])? e($fields['message']):''?></textarea>
                  </div>
 
-                 <button  type="submit" value="Send" class="style-button-contact"  name="button">Send</button>
+                 <button  type="submit" value="Send" class="style-button-contact"  name="button" disabled>Send</button>
               </form>
         </div>
       </div>
