@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="jquery-3.1.1.min.js"></script>
+    <title>The SoFound Company | A Create Digital Media Company | Web Development, Film, Marketing & Graphics</title>
+    <meta name="description" content="The SoFound Company is an experienced creative tech & digital media company. We help grow the brand & business while you work on your craft. Contact us to learn how.">
+    <meta name="keywords" content="create, web developtment, brampton, canada, film, creative, tech, digital, marketing, seo, unlimited graphics">
+
+    <meta charset="UTF-8">
+    <link href="css/hover-min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="assets/js/app.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.1/css/hover-min.css" type="text/css" />
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/346eb970e2.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="assets/images/icon_website.png">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-164156903-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-164156903-1');
+    </script>
+</head>
+<div class="media-size">
+
+</div>
+
+<body>
+    <!-- ............................................. Nav ............................................. -->
+    <header>
+      <nav class="">
+        <!-- Web -->
+        <div class="row ">
+          <div class="col-6 d-none d-sm-none d-md-block col-6 ">
+            <a href="index.html"><img style="opacity:1;" src="assets/images/small_icon_3.png" class="logo"  alt=""></a>
+
+          </div>
+          <div  class="d-none d-sm-none d-md-block col-6">
+            <div class="row  margin-top">
+              <div   style="margin-left:-10px;"  class="col-2 ">
+                <a class="text-header nav-link" href="index.html">Home</a>
+              </div>
+              <div class="col-2 dropdown">
+                <p class="text-header nav-link">Services</p>
+                <div class="dropdown-content text-left">
+                  <a href="service-web.html">Web Development</a>
+                  <a href="service-graphics.html">Graphic Designing</a>
+                  <a href="service-film.html">Film & Photography</a>
+                  <a href="service-branding.html">Brand Identity</a>
+                  <a href="service-marketing.html">Digital Marketing</a>
+                  <a href="service-socialmedia.html">Social Media</a>
+                </div>
+              </div>
+              <div class="col-2  ">
+                <a class="text-header  nav-link" href="aboutus.html">About</a>
+              </div>
+              <div class="col-2 text-center">
+                <a class="text-header nav-link" href="contact.html">Contact</a>
+              </div>
+              <div class="col-4 ">
+                <a href="contact.html#linkto-connect">
+                <button  style="margin:0; "  type="button" class="d-sm-none d-md-block d-none text-header-button header-button-sizing btn btn-light"> Have a Question?</button>
+                </a>
+                <div id="myModal" class="modal">
+
+                  <!-- Modal content -->
+                  <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h3 style="padding-bottom:20px;" class="text-title text-center">Have a Question?</h3>
+                    <form onsubmit="return validateForm()"action="contact.php" method="post" class=" container">
+                      <div class="form-row">
+                        <!--- Services -------------->
+                        <div  class="  search_categories  form-group col-12 col-sm-12">
+                          <select  id="inputState" name="subjectsubject" class="textarea-info form-control" >
+                            <option selected>Services...</option>
+                            <option>Web & Software Development</option>
+                            <option>Graphic Designing</option>
+                            <option>Digital Marketing</option>
+                            <option>Social Media</option>
+                            <option>Film & Photography</option>
+                            <option>Brand Identity</option>
+                          </select>
+                        </div>
+                        <!--- NName -------------->
+                        <div class="form-group col-12 col-sm-12">
+                          <input style="border-radius:25px;" placeholder="Name" type="text" name="name" class=" textarea-info form-control" required>
+                        </div>
+                      </div>
+                      <div class="form-row">
+                        <!--- Email -------------->
+                        <div class="form-group col-md-6 col-sm-6">
+                          <input style="border-radius: 25px;" type="email" class="textarea-info form-control" id="Email" name="email" placeholder="Email" required >
+                        </div>
+                        <!--- Phone -------------->
+                        <div class="form-group col-md-6 col-sm-6">
+                          <input style="border-radius: 25px; "  class="textarea-info form-control" placeholder="Phone" type="tel" name="phone">
+                        </div>
+                      </div>
+                      <!--- Message -------------->
+                      <div class="form-group">
+                       <textarea style="border-radius: 15px;" placeholder="How can we help?" class="textarea-info form-control" id="exampleFormControlTextarea1" id="comment" name="message" rows="3" required ></textarea>
+                     </div>
+
+                     <button type="submit" value="Send" style="margin-top:5%;" class="style-button-2" type="submit" name="button">Contact</button>
+                    </form>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+        <!-- Mobile -->
+        <div class="row d-block d-sm-none d-none d-sm-block d-md-none">
+
+          <nav style="padding-left:3%;"role="col-6 navigation">
+            <div id="menuToggle">
+              <!--
+              A fake / hidden checkbox is used as click reciever,
+              so you can use the :checked selector on it.
+              -->
+              <input type="checkbox" />
+
+              <!--
+              Some spans to act as a hamburger.
+
+              They are acting like a real hamburger,
+              not that McDonalds stuff.
+              -->
+              <span></span>
+              <span></span>
+              <span></span>
+
+              <!--
+              Too bad the menu has to be inside of the button
+              but hey, it's pure CSS magic.
+              -->
+              <ul id="menu">
+                <a style="font-weight:100; " class="text-title-2" href="index.html"><li>Home</li></a>
+                <a onclick="myFunction()" style="font-weight:100;" class="text-title-2" ><li class="text-title-3">Services<i style="margin-left:15px;"class="fas fa-caret-down"></i></li></a>
+                <div style="margin-top:-10px;" id="myDIV" class="row">
+                  <a  style="margin-top:15px;" class="col-12 dropdown-services-2" href="service-web.html">Web Development</a>
+                  <a style="margin-top:15px;" class="col-12 dropdown-services-2" href="service-graphics.html">Graphic Designing</a>
+                  <a style="margin-top:15px;" class="col-12 dropdown-services-2" href="service-film.html">Film & Photography</a>
+                  <a style="margin-top:15px;" class="col-12 dropdown-services-2" href="service-branding.html">Brand Identity</a>
+                  <a style="margin-top:15px;" class="col-12 dropdown-services-2" href="service-business.html">Business Management</a>
+                  <a style="margin-top:15px;" class="col-12 dropdown-services-2" href="service-marketing.html">Digital Marketing</a>
+                  <a style="margin-top:15px;" class="col-12 dropdown-services-2" href="service-socialmedia.html">Social Media</a>
+                </div>
+                <a style="font-weight:100;" class="text-title-2" href="aboutus.html"><li>About Us</li></a>
+
+                <a style="font-weight:100;" class="text-title-2" href="contact.html"><li>Contact</li></a>
+
+                <button onclick="window.location.href = 'contact.html';" style="box-shadow: 0; font-size:15px; margin-top:10px; margin-left:4%;" class="style-button-blue-aboutus" type="button" name="button">Have a Question?</button>
+              </ul>
+            </div>
+          </nav>
+          <div class="col-6 icon_image hide-on-xs  ">
+            <a href="index.html"><img src="assets/images/white_icon.png" class="logo"  alt=""></a>
+
+          </div>
+        </div>
+
+        <!-- Image -->
+        <img id="dont-show-on-small-4" src="assets/images/sofoundsite-services2.jpg" class="image-header"  alt="">
+        <img id="content-mobile" src="untitled-4.jpg" class="image-header"  alt="">
+
+      </nav>
+      <!-- ..............Promotion......... -->
+      <div class="hidden">
+        <div class="col-6"></div>
+        <div class="col-6 header-opener  " >
+          <div class="row">
+            <p class="text-header-minor">Take your</p>
+          </div>
+          <div class="row ">
+            <h1 id="dont-show-on-small" class="text-header-pro header-margin ">Brand <br> &Business</h1>
+            <h1 id="show-on-small" class="text-header-pro header-margin ">Brand <br> &<br>Business</h1>
+          </div>
+          <div class="row">
+            <p class="text-header-minor margin-top-header">To a new level</p>
+          </div>
+          <div class="row" >
+            <p class="text-header-paragraph margin-text-header-paragraph ">The SoFound Company is an experienced creative tech & digital media company. We help grow the brand & business while you work on your craft. Contact us to learn how.
+          </div>
+          <div class="row">
+            <a href="contact.html"> <button  class="style-button-blue" type="button" name="button">Contact Us</button></a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <br>
+   <!-- ............................................. (1) Our Services .............................................................................. -->
+    <div style="padding-bottom:4%; padding-top:4%;"class="our-services-margin-top services-container-2" >
+    <section class="services-container" style="margin-top: %;">
+      <h1 style="opacity:0;"class="text-center text-title" ></h1>
+      <div style="margin-top: -3%;" class="row text-center">
+        <div class="services-margin-top col-lg-4 col-md-4 col-sm-6 col-xs-6 col-6">
+          <a target="_blank" href="service-web.html"> <img class="image-services hvr-grow" style="padding:10px;" href="contact.html" src="assets/images/computer1.png" alt=""></a>
+          <p class="text-heading">
+            <a href="service-web.html" target="_blank"> Web Development</a><br>
+            <a href="service-web.html" target="_blank" class="contact-learn-homepage">Learn More ></a>
+          </p>
+        </div>
+        <div class="services-margin-top  col-lg-4 col-md-4 col-sm-6 col-xs-6 col-6">
+          <a target="_blank" href="service-graphics.html"> <img class="image-services hvr-grow" style="padding:10px;" src="assets/images/graphics.png" alt=""></a>
+          <p class="text-heading">
+            <a href="service-graphics.html" target="_blank"> Graphic Designing</a><br>
+            <a href="service-graphics.html" target="_blank" class="contact-learn-homepage">Learn More ></a>
+          </p>
+        </div>
+        <div class="services-margin-top  col-lg-4 col-md-4 col-sm-6 col-xs-6 col-6">
+            <a target="_blank" href="service-marketing.html"> <img class="image-services hvr-grow"  style="padding:10px;" src="assets/images/marketing.png" alt=""></a>
+            <p class="text-heading">
+              <a href="service-marketing.html" target="_blank"> Marketing</a><br>
+              <a href="service-marketing.html" target="_blank" class="contact-learn-homepage">Learn More  ></a>
+            </p>
+        </div>
+        <div class="services-margin-top col-lg-4 col-md-4 col-sm-6 col-xs-6 col-6">
+            <a target="_blank" href="service-socialmedia.html"> <img class="image-services hvr-grow" style="padding:10px;" src="assets/images/icon-socialmedia8.png" alt=""></a>
+            <p class="text-heading">
+              <a href="service-socialmedia.html" target="_blank"> Social Media</a><br>
+              <a href="service-socialmedia.html" target="_blank" class="contact-learn-homepage">Learn More ></a>
+            </p>
+        </div>
+        <div class="services-margin-top  col-lg-4 col-md-4 col-sm-6 col-xs-6 col-6">
+            <a target="_blank" href="service-film.html"> <img class="image-services hvr-grow" style="padding:10px;" src="assets/images/film.png" alt=""></a>
+            <p class="text-heading">
+              <a href="service-film.html" target="_blank"> Film & Photography</a><br>
+              <a href="service-film.html" target="_blank" class="contact-learn-homepage">Learn More ></a>
+            </p>
+        </div>
+        <div class="services-margin-top  col-lg-4 col-md-4 col-sm-6 col-xs-6 col-6">
+            <a target="_blank" href="service-branding.html"> <img class="image-services hvr-grow" style="padding:10px;" src="assets/images/management.png" alt=""></a>
+            <p class="text-heading">
+              <a href="service-branding.html" target="_blank">Branding</a><br>
+              <a href="service-branding.html" target="_blank" class="contact-learn-homepage">Learn More ></a>
+            </p>
+        </div>
+      </div>
+    </section>
+    </div>
+
+
+    <!-- ............................................. (2) About Us ................................................................................... -->
+    <section style="margin-top: 40px;" class="top-bottom-box aboutus">
+      <div class=" row">
+        <div class="col-lg-6 col-md-6  col-12 text-center aboutus-logo">
+          <img class="aboutus-logo" src="assets/images/sofound_logo_name_on_mask_2.png" alt="">
+        </div>
+        <div class="col-lg-6 col-md-6  col-12">
+          <div class="boxed row">
+            <h2 class="text-title" >About Us</h2>
+            <p class="text-paragraph">The SoFound Company is a creative digital media company that specializes in improving brand & business practises through the implementation of art.  We have both launched and redesigned brands ranging in the clothing and car industries. We place a large emphasis in merging art and business, with growth in mind. Due to our wide array of skills and experience, we can help across many platforms, from web development, brand design, cinematography and print marketing - all while maintaining a congruent brand strategy</p>
+            <button  class="style-button-blue-aboutus" type="button" name="button">Learn More</button>
+          </div>
+          <div style="margin-top:5%; " class="center row margin-cirlces">
+            <div class="circle">
+              <p style="margin:24%;" class="text-paragraph text-center">Business<br>Acumen</p>
+            </div>
+            <div style="margin: 24px 24px;" class="text-center">
+              +
+            </div>
+            <div class="circle">
+              <p style="margin:24%;" class="text-paragraph text-center">Creative<br> Minds</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+    <!-- ............................................. (3) portfolio .................................................................................... -->
+    <section class="fadingin"style="margin-top:10%; margin-left: 7%; margin-bottom:9%;">
+
+      <div class="row d-none d-sm-block">
+        <div class="row">
+          <div class="col-1 col-md-1">
+            <h1 class="text-recent-project">Recent Projects</h1>
+          </div>
+          <div class="col-3 col-md-3">
+            <img class="image-recents-1"  src="assets/images/picture_camaro.png" alt="">
+          </div>
+          <div class="col-3 col-md-3">
+            <img class="image-recents-1" src="assets/images/picture_fqp.png" alt="">
+          </div>
+          <div class="col-3 col-md-3">
+            <img  class="image-recents-1" src="assets/images/picture_posteranta.png" alt="">
+            <p style="font-size:10px; margin-right:-8%; margin-top:4px; color: black; font-weight:400;" class="text-click-see-more text-right"><a target="_blank" href="service-marketing.html#linkto-portfoliomarketing">click here to see more</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="text-right container d-none d-sm-block">
+      </div>
+      <div class="row d-block d-sm-none">
+        <div class="row">
+          <div class="col-2">
+            <h1 class="text-recent-project" style="font-size:8.5vw;">Recent Projects</h1>
+          </div>
+          <div class="col-10">
+            <div  class="col-6">
+              <img class="image-recents" src="assets/images/picture_camaro.png" alt="">
+
+            </div>
+            <div  class="col-6">
+              <img class="image-recents" style="margin-top:5px;"src="assets/images/picture_fqp.png" alt="">
+            </div>
+            <div class="col-6">
+              <img  class="image-recents" style="margin-top:5px;" src="assets/images/picture_posteranta.png" alt="">
+            </div>
+          </div>
+
+
+        </div>
+        <div class="text-right">
+            <p style="font-size:10px; margin-right:-7%; margin-top:4px; color: black; font-weight:400;" class="text-center text-see-more">click here to see more</p>
+        </div>
+      </div>
+
+
+    </section>
+    <!-- ............................................. (4) Why we can help you ........................................................................ -->
+    <section class="top-bottom-box whoweare" style="padding-bottom:4%; padding-top:4%;">
+      <div class="container">
+        <div class="row">
+          <div style="" class="whoeweare-margin col-lg-6 col-md-6 col-xs-6 col-12">
+            <div class="row">
+              <h4 class="whoeweare-text-padding whoeweare-text-padding2 text-title text-phone" style="color:white;">Who We Are</h4>
+            </div>
+            <div class="row">
+              <p style="color:white;" id="subtexting-top" class="text-p-phone-who text-paragraph whoweare-text-paragraph">
+              The SoFound Company is a team that takes great pride in creating visual concepts. We provide timely content with an adaptable schedule. With vast industry experience and a highly creative team, we treat each project with the care and attention it deserves. To see more content, checkout our extensive portfolio.  </p>
+            </div>
+            <div class="row">
+              <img class="whoeweare-image-margin image-whoweare"src="assets/images/picture-sitting-on-computer.png" alt="">
+            </div>
+          </div>
+          <div style="" class="whoeweare-margin whoweare-bottom col-lg-6 col-md-6 col-xs-6 col-12">
+            <div class="row">
+              <h4 class="whoeweare-text-padding text-title text-phone-2" style="color:white;" >What We Are</h4>
+            </div>
+            <div class="row">
+              <p style="color:white;" id="subtexting"class="text-p-phone-who text-paragraph whoweare-text-paragraph">	The SoFound Company primarily specializes in branding, cinematography and development. We are highly dedicated in providing quality content, while maintaining the client's vision. We bring to life various ideas and visions, with a high level of execution. We completely invest ourselves into the process and end result. </p>
+            </div>
+            <div class="row">
+              <img class="whoeweare-image-margin image-whoweare" src="assets/images/photo-1516842611600-784c63504e2c.jpeg" alt="">
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ............................................. (5) Reviews  .................................................................................... -->
+    <section class="fadingin review-section container-fluid text-center" style=" ">
+
+
+      <div class="row margin-top-reviews" style="">
+        <div class="card-margin col-lg-6 col-md-6 col-xs-6 col-12">
+          <div class="card" style="">
+            <div class="card-body">
+              <h5 class="card-title">AWESOME!</h5>
+              <p class="text-paragraph">The SoFound team really helped us define our brand and enter the online community</p>
+              <blockquote class="blockquote mb-0">
+                <footer class="blockquote-footer">Web Dev. <cite title="Source Title">D&S Car Service</cite></footer>
+                <img src="assets/images/d&s-review.png" class="image-reviews" alt="">
+              </blockquote>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 col-md-6 col-xs-6 col-12">
+          <div class="card " style="">
+            <div class="card-body">
+              <h5 class="card-title">Highly COMPREHENSIVE!</h5>
+              <p class="text-paragraph">The team really helped us prepare a clear and defined strategy</p>
+              <blockquote class="blockquote mb-0">
+                <footer class="blockquote-footer">Graphics for <cite title="Source Title">The Water Club</cite></footer>
+                <img src="assets/images/waterclub.png" class="image-reviews" alt="">
+              </blockquote>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+</body>
+
+<!-- ............................................. Footer ............................................. -->
+
+<footer >
+  <img src="assets/images/footer-short.jpg" class="image-footer"  alt="">
+
+</footer>
+<footer style="background-color:#1a55a3;" class="page-footer font-small stylish-color-dark pt-4">
+
+  <!-- Footer Links -->
+  <div class=" container text-center text-md-left">
+
+    <!-- Grid row -->
+    <div class="row">
+
+      <!-- Grid column -->
+      <div class="col-md-4 mx-auto">
+
+        <!-- Content -->
+        <h5 class="text-footer  text-uppercase mt-3 mb-4">Contact</h5>
+        <!-- <p class="text-footer">Here you can use rows and columns to. </p> -->
+          <ul class=" list-unstyled">
+            <li style="margin-bottom: 8px;">
+              <a  class="text-footer-list" href="mailto:team@thesofound.com?subject = Inquiry">team@thesofound.com</a>
+            </li>
+            <li style="margin-bottom: 8px;">
+              <a class="text-footer-list" target="_blank" href="https://www.instagram.com/thesofound/">@TheSoFound</a>
+            </li>
+            <li style="margin-bottom: 8px;" >
+              <a class="text-footer-list"  href="tel:"> </a>
+            </li>
+            <li>
+              <a class="text-footer-list" href="https://facebook.com/SoFoundMedia"></a>
+            </li>
+          </ul>
+
+      </div>
+      <!-- Grid column -->
+
+      <hr class="clearfix w-100 d-md-none">
+
+      <!-- Grid column -->
+      <div class="col-md-2 mx-auto">
+
+        <!-- Links -->
+        <h5 class="text-footer text-uppercase mt-3 mb-4">Services</h5>
+
+        <ul class=" list-unstyled">
+          <li>
+            <a class="text-footer-list" target="_blank" href="service-graphics.html#linkto-unlimitedgraphics">Unlimited Graphics</a>
+          </li>
+          <li>
+            <a class="text-footer-list" target="_blank" href="service-web.html#linkto-webdev">Web Development</a>
+          </li>
+          <li>
+            <a class="text-footer-list" target="_blank" href="service-branding.html#linkto-logocreation">Logo Creation</a>
+          </li>
+          <li>
+            <a class="text-footer-list" target="_blank" href="service-marketing.html#linkto-seo">SEO/PPC</a>
+          </li>
+        </ul>
+
+      </div>
+      <!-- Grid column -->
+
+      <hr class="clearfix w-100 d-md-none">
+
+      <!-- Grid column -->
+      <div class="col-md-2 mx-auto">
+
+        <!-- Links -->
+        <h5 class="text-footer text-uppercase mt-3 mb-4">Portfolio</h5>
+
+        <ul class=" list-unstyled">
+          <li>
+            <a class="text-footer-list" target="_blank" href="service-web.html#linkto-portfoliodevelopment">Development</a>
+          </li>
+          <li>
+            <a class="text-footer-list" target="_blank" href="service-graphics.html#linkto-portfoliographics">Graphics</a>
+          </li>
+          <li>
+            <a class="text-footer-list" target="_blank" href="service-branding.html#linkto-portfoliobranding">Branding</a>
+          </li>
+          <li>
+            <a class="text-footer-list" target="_blank" href="service-marketing.html#linkto-portfoliomarketing">Marketing</a>
+          </li>
+        </ul>
+
+      </div>
+      <!-- Grid column -->
+
+      <hr class="clearfix w-100 d-md-none">
+
+      <!-- Grid column -->
+      <div class="col-md-2 mx-auto">
+
+        <!-- Links -->
+        <h5 class="text-footer text-uppercase mt-3 mb-4">About Us</h5>
+
+        <ul class=" list-unstyled">
+          <li>
+            <a class="text-footer-list" target="_blank"  href="aboutus.html">Our Mission</a>
+          </li>
+          <li>
+            <a class="text-footer-list" target="_blank" href="aboutus.html">Our Team</a>
+          </li>
+          <li>
+            <a class="text-footer-list" target="_blank" href="careers.html">Careers</a>
+          </li>
+          <li>
+            <a class="text-footer-list" target="_blank" href="aboutus.html">More</a>
+          </li>
+        </ul>
+
+      </div>
+      <!-- Grid column -->
+
+    </div>
+    <!-- Grid row -->
+
+  </div>
+  <!-- Footer Links -->
+
+  <!--  <hr>
+
+   Call to action
+
+  <ul style="background-color:grey;" class="list-unstyled list-inline text-center py-2">
+    <li class="list-inline-item">
+      <h5 class="mb-1">Register for free</h5>
+    </li>
+    <li class="list-inline-item">
+      <a href="#!" class="btn btn-danger btn-rounded">Sign up!</a>
+    </li>
+  </ul>
+
+  <hr> -->
+
+  <!-- Social buttons -->
+  <ul style="margin-top:50px;" class=" list-unstyled list-inline text-center">
+    <li class="list-inline-item">
+      <a target="_blank" href="https://facebook.com/SoFoundMedia" class="btn-floating btn-li mx-1">
+        <i  class="socials-3 fab fa-facebook-f"></i>
+
+      </a>
+    </li>
+    <li class="list-inline-item">
+      <a target="_blank" href="https://www.instagram.com/thesofound/" class="btn-floating btn-li mx-1">
+        <i  class="socials-3 fab fa-instagram"></i>
+
+      </a>
+    </li>
+    <li class="list-inline-item">
+      <a href="mailto:team@thesofound.com" class="btn-floating btn-li mx-1">
+        <i class=" socials-3 fas fa-envelope"> </i>
+      </a>
+    </li>
+    <li class="list-inline-item">
+      <a href="tel:" class="btn-floating btn-li mx-1">
+        <i class="socials-3 fas fa-phone"> </i>
+      </a>
+    </li>
+  </ul>
+  <!-- Social buttons -->
+
+  <!-- Copyright -->
+  <div class="text-footer-copyright footer-copyright text-center py-3 ">© 2020 Copyright the SoFound Company
+  </div>
+  <!-- Copyright -->
+
+</footer>
+
+<script>
+  // Get the modal
+  var modal = document.getElementById("myModal");
+
+  // Get the button that opens the modal
+  var btn = document.getElementById("myBtn");
+
+  // Get the <span> element that closes the modal
+  var span = document.getElementsByClassName("close")[0];
+
+  // When the user clicks the button, open the modal
+  btn.onclick = function() {
+    modal.style.display = "block";
+  }
+
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function() {
+    modal.style.display = "none";
+  }
+
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+  function myFunction() {
+  var x = document.getElementById("myDIV");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+
+}
+$(document).on("scroll", function () {
+var pageTop = $(document).scrollTop()
+var pageBottom = pageTop + $(window).height()
+var tags = $("section")
+
+for (var i = 0; i < tags.length; i++) {
+var tag = tags[i]
+
+if ($(tag).position().top < pageBottom) {
+$(tag).addClass("visible")
+} else {
+  $(tag).removeClass("visible")
+}
+}
+})
+
+</script> ..!
+</html>
